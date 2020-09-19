@@ -6,7 +6,11 @@
 
 const string Address_gRPC_HOST = "https://localhost:5002"; // the host address where gRPC service is on
 
-3. In CareerCloud.gRPC project students must make Mapper static class like below.
+3. The GrpService attribut of Protbuf element for each poco in [CareerCloud.gRPC.csproj] file should be "Server, Client" as below.
+
+<Protobuf Include="Protos\ApplicantEducation.proto" GrpcServices="Server,Client" />
+
+4. In CareerCloud.gRPC project students must make Mapper static class like below.
 
 ProtoMapper.cs 
 ************************
@@ -15,16 +19,16 @@ namespace CareerCloud.gRPC.Services
 {
     public static class ProtoMapper
     {
-        public static SecurityLoginProto mapFromSecurityLoginPoco(SecurityLoginPoco poco)
+        public static SecurityLoginProto MapFromSecurityLoginPoco(SecurityLoginPoco poco)
         {
             return new SecurityLoginProto()
             {
                 Id = poco.Id.ToString(),
                 Login = poco.Login,
                 Password = poco.Password,
-                Created = ProtoMapper.convertDateTime2TimeStamp(poco.Created),
-                PasswordUpdate = ProtoMapper.convertDateTime2TimeStamp(poco.PasswordUpdate),
-                AgreementAccepted = ProtoMapper.convertDateTime2TimeStamp(poco.AgreementAccepted),
+                Created = ProtoMapper.ConvertDateTime2TimeStamp(poco.Created),
+                PasswordUpdate = ProtoMapper.ConvertDateTime2TimeStamp(poco.PasswordUpdate),
+                AgreementAccepted = ProtoMapper.ConvertDateTime2TimeStamp(poco.AgreementAccepted),
                 IsLocked = poco.IsLocked,
                 IsInactive = poco.IsInactive,
                 EmailAddress = poco.EmailAddress,
@@ -35,7 +39,7 @@ namespace CareerCloud.gRPC.Services
                 TimeStamp = poco.TimeStamp == null ? ByteString.Empty : ByteString.CopyFrom(poco.TimeStamp)
             };
         }
-        public static SecurityLoginPoco mapToSecurityLoginPoco(SecurityLoginProto reply)
+        public static SecurityLoginPoco MapToSecurityLoginPoco(SecurityLoginProto reply)
         {
             return new SecurityLoginPoco()
             {
