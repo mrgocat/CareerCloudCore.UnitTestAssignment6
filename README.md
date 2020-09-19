@@ -8,7 +8,11 @@ const string Address_gRPC_HOST = "https://localhost:5002"; // the host address w
 
 3. The GrpService attribut of Protbuf element for each poco in [CareerCloud.gRPC.csproj] file should be "Server, Client" as below.
 
-<Protobuf Include="Protos\ApplicantEducation.proto" GrpcServices="Server,Client" />
+<pre>
+<ItemGroup>
+	<Protobuf Include="Protos\SystemLanguageCode.proto" GrpcServices="Server,Client" />
+</ItemGroup>
+</pre>
 
 4. In CareerCloud.gRPC project students must make Mapper static class like below.
 
