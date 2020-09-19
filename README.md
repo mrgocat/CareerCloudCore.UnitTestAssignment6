@@ -10,6 +10,7 @@ const string Address_gRPC_HOST = "https://localhost:5002"; // the host address w
 
 ProtoMapper.cs 
 ************************
+
 namespace CareerCloud.gRPC.Services
 {
     public static class ProtoMapper
