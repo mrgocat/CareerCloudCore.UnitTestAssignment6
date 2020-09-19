@@ -366,7 +366,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         { 
             var client = new SystemLanguageCode.SystemLanguageCodeClient(_channel);
             // add 
-            SystemLanguageCodeProto proto = ProtoMapper.mapFromSystemLanguageCodePoco(_systemLangCode);
+            SystemLanguageCodeProto proto = ProtoMapper.MapFromSystemLanguageCodePoco(_systemLangCode);
             SystemLanguageCodeList protos = new SystemLanguageCodeList();
             protos.Items.Add(proto);
             client.AddSystemLanguageCode(protos);
@@ -435,7 +435,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new CompanyDescription.CompanyDescriptionClient(_channel);
             // add 
-            CompanyDescriptionProto proto = ProtoMapper.mapFromCompanyDescriptionPoco(_companyDescription);
+            CompanyDescriptionProto proto = ProtoMapper.MapFromCompanyDescriptionPoco(_companyDescription);
             CompanyDescriptionList protos = new CompanyDescriptionList();
             protos.Items.Add(proto);
             client.AddCompanyDescription(protos);
@@ -507,7 +507,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new CompanyJob.CompanyJobClient(_channel);
             // add 
-            CompanyJobProto proto = ProtoMapper.mapFromCompanyJobPoco(_companyJob);
+            CompanyJobProto proto = ProtoMapper.MapFromCompanyJobPoco(_companyJob);
             CompanyJobList protos = new CompanyJobList();
             protos.Items.Add(proto);
             client.AddCompanyJob(protos);
@@ -580,7 +580,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new CompanyJobEducation.CompanyJobEducationClient(_channel);
             // add 
-            CompanyJobEducationProto proto = ProtoMapper.mapFromCompanyJobEducationPoco(_companyJobEducation);
+            CompanyJobEducationProto proto = ProtoMapper.MapFromCompanyJobEducationPoco(_companyJobEducation);
             CompanyJobEducationList protos = new CompanyJobEducationList();
             protos.Items.Add(proto);
             client.AddCompanyJobEducation(protos);
@@ -650,7 +650,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new SecurityLogin.SecurityLoginClient(_channel);
             // add 
-            SecurityLoginProto proto = ProtoMapper.mapFromSecurityLoginPoco(_securityLogin);
+            SecurityLoginProto proto = ProtoMapper.MapFromSecurityLoginPoco(_securityLogin);
             SecurityLoginList protos = new SecurityLoginList();
             protos.Items.Add(proto);
             client.AddSecurityLogin(protos);
@@ -738,7 +738,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new SecurityLoginsLog.SecurityLoginsLogClient(_channel);
             // add 
-            SecurityLoginsLogProto proto = ProtoMapper.mapFromSecurityLoginsLogPoco(_securityLoginLog);
+            SecurityLoginsLogProto proto = ProtoMapper.MapFromSecurityLoginsLogPoco(_securityLoginLog);
             SecurityLoginsLogList protos = new SecurityLoginsLogList();
             protos.Items.Add(proto);
             client.AddSecurityLoginsLog(protos);
@@ -810,7 +810,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new ApplicantProfile.ApplicantProfileClient(_channel);
             // add 
-            ApplicantProfileProto proto = ProtoMapper.mapFromApplicantProfilePoco(_applicantProfile);
+            ApplicantProfileProto proto = ProtoMapper.MapFromApplicantProfilePoco(_applicantProfile);
             ApplicantProfileList protos = new ApplicantProfileList();
             protos.Items.Add(proto);
             client.AddApplicantProfile(protos);
@@ -892,7 +892,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new ApplicantEducation.ApplicantEducationClient(_channel);
             // add 
-            ApplicantEducationProto proto = ProtoMapper.mapFromApplicantEducationPoco(_applicantEducation);
+            ApplicantEducationProto proto = ProtoMapper.MapFromApplicantEducationPoco(_applicantEducation);
             ApplicantEducationList protos = new ApplicantEducationList();
             protos.Items.Add(proto);
             client.AddApplicantEducation(protos);
@@ -970,7 +970,7 @@ namespace CareerCloudCore.UnitTests.Assignment6
         {
             var client = new ApplicantJobApplication.ApplicantJobApplicationClient(_channel);
             // add 
-            ApplicantJobApplicationProto proto = ProtoMapper.mapFromApplicantJobApplicationPoco(_applicantJobApplication);
+            ApplicantJobApplicationProto proto = ProtoMapper.MapFromApplicantJobApplicationPoco(_applicantJobApplication);
             ApplicantJobApplicationList protos = new ApplicantJobApplicationList();
             protos.Items.Add(proto);
             client.AddApplicantJobApplication(protos);
