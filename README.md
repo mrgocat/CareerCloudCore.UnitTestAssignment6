@@ -34,7 +34,6 @@ namespace CareerCloud.gRPC.Services
                 PrefferredLanguage = poco.PrefferredLanguage == null ? string.Empty : poco.PrefferredLanguage,
                 TimeStamp = poco.TimeStamp == null ? ByteString.Empty : ByteString.CopyFrom(poco.TimeStamp)
             };
-
         }
         public static SecurityLoginPoco mapToSecurityLoginPoco(SecurityLoginProto reply)
         {
